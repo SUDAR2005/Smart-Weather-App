@@ -13,7 +13,7 @@
     top:10%;
     left:0;
     right:0;
-    bottom:0;
+    bottom:10%;
     background:url('..\\style\\img\\footerbackground.png') no-repeat center center/cover; 
     filter:blur(10px);
     z-index:-1;
@@ -40,12 +40,16 @@
 }
 .footer .footer-box2 .country-list ul{
         list-style-type:none;
-        padding:0;
+        padding:0px;
 }
 .footer .footer-box2 .country-list ul li{
+    margin:10px 0;
+}
+.footer .footer-box2 .country-list ul li:hover {
     margin:5px 0;
-    padding-bottom:5px; 
+    padding:0px; 
     border-bottom:2px solid #000;
+    transition:margin 0.3s ease-in-out, padding 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 .footer-box3{
         display:flex;
@@ -59,7 +63,7 @@
         padding:20px;
 }
 footer a:hover{
-    color: aliceblue;
+    color:blue;
 }
 .fa-facebook-f{
     background-color:rgb(45, 45, 148);
@@ -93,6 +97,12 @@ footer a:hover{
     border-radius:5px 200%;
     color:#e1306c;;
 }
+.playwrite-hu{
+    font-family:"Playwrite HU", cursive;
+    font-optical-sizing:auto;
+    font-weight:60;
+    font-style:normal;
+  }
 .climate-inverse{
         justify-content:center;
         align-items:center;
@@ -115,16 +125,16 @@ sup{
     margin-left:15px;
 }
 .footer a{
-    text-decoration: none;
-    color: black;
+    text-decoration:none;
+    color:black;
 }
 footer button{
-    background-color: transparent;
-    color: white;
-    border: none;
+    background-color:transparent;
+    color:white;
+    border:none;
 }
 footer button:hover{
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
+    background-color:transparent;
+    color:white;
+    cursor:pointer;
 }
