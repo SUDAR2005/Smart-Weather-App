@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/predictburst-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <title>Climate Inverse</title>
 </head>
 <body>
-    
+    <div class="home-box">
+        <div class="home-box1">
+            <div class="explore">
+                <form action="">
+                    <div class="explore-container">
+                        <label for="text"><h2 class="explore-text">Explore</h2></label>
+                        <input type="text" name="text" id="text" placeholder="Type to search">
+                        <button type="button"><b>Submit</b></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="home-box2">
+                <h3 id="temp">27°C\38.5F</h3>
+           <div class="contents">
+                <div class="item" id="item">
+                    <p><progress id="pressure-level" value="70" max="100">70%<p id="pressure-text">Pressure</p></progress>
+                </div>
+                <div class="item" id="item">
+                    <p><progress id="humidity-level" value="70" max="100">70%<p id="humidity-text">Humidity</p></progress>
+                </div>
+                <div class="item" id="item">
+                    <p><progress id="windspeed-level" value="50" max="100" >70%<p id="windspeed">Windspeed</p></progress>
+                </div>
+           </div>
+        </div>
+    </div>
 </body>
 </html>
