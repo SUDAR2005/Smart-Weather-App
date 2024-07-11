@@ -62,7 +62,6 @@ body {
 .sidebar.hidden {
     transform: translateX(-100%);
 }
-
 .sidebar a {
     color: #fff;
     text-decoration: none;
