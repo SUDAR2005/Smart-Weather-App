@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Weather Prediction-App</title>
+    <link rel="stylesheet" href="..\assets\home-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="left-box">
+            <center><h1 id ='high'>Madurai</h1></center>
+            <div>
+                <div class="lef-up">
+                    <div>
+                        <h3>Sunrise: 5.57 AM</h3>
+                    </div>
+                    <div>
+                        <h3>Sunset: 6.00 PM</h3>
+                    </div>
+                </div>
+                <div  class="left-down-box">
+                    <div class="container-header">
+                        <p>Demography</p>
+                    </div>
+                    <div class="container">
+                        <h2>Latitude:-</h2>
+                        <h2> 198'50'' </h2>
+                    </div>
+                    <div class="container">
+                        <h2>Longitude:-</h2>
+                        <h2> 204'57''</h2>
+                    </div>
+                    <div class="container">
+                        <h2>City Nearby:-</h2>
+                        <h2> Dindugal , Karur , Tirunelveli</h2>
+                    </div>
+                    
+                </div>
+            
+            </div>
+               
+        </div>
+        <div class="right-box">
+            <div id="map" class="map-container"></div>
+        </div>
+    </div>
+    <script>
+        var map = L.map('map').setView([9.9252, 78.1198], 13); // Coordinates for Madurai
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([9.9252, 78.1198]).addTo(map)
+            .bindPopup('Madurai')
+            .openPopup();
+    </script>
+    </div>
+    
+</body>
+</html>

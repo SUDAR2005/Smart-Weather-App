@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 body{
     background:url('../assets/img/background.png');
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .home-box{
@@ -46,8 +48,8 @@ input:focus{
 }
 
 .explore-text{
-    font-size:450%;
-    color:black;
+    font-size:400%;
+    color:white;
 }
 
 .home-box .home-box2{
