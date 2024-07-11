@@ -109,8 +109,11 @@ footer a:hover{
         justify-content:center;
         align-items:center;
         text-align:center;
-        width:65%;
-        color:black;
+        width:55%;
+        color:white;
+}
+.climate-inverse h1{
+    font-size: 25px;
 }
 sup{
         font-size:1rem;

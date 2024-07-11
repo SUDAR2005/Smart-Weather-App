@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Weather Prediction-App</title>
-    <link rel="stylesheet" href="..\assets\home-style.css">
+    <link rel="stylesheet" href="../assets/home-style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/footer-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../app/home.js" defer></script>
 </head>
 <body>
     <div class="main">
         <div class="left-box">
-            <center><h1 id ='high'>Madurai</h1></center>
+            <center><h1 id='high'>Madurai</h1></center>
             <div>
                 <div class="lef-up">
                     <div>
@@ -21,44 +27,118 @@
                         <h3>Sunset: 6.00 PM</h3>
                     </div>
                 </div>
-                <div  class="left-down-box">
+                <div class="left-down-box">
                     <div class="container-header">
                         <p>Demography</p>
                     </div>
                     <div class="container">
-                        <h2>Latitude:-</h2>
-                        <h2> 198'50'' </h2>
+                        <h2>Latitude:</h2>
+                        <h2 id="latitude-field">9.9197</h2>
                     </div>
                     <div class="container">
-                        <h2>Longitude:-</h2>
-                        <h2> 204'57''</h2>
+                        <h2>Longitude:</h2>
+                        <h2 id="longitude-field">78.1194</h2>
                     </div>
                     <div class="container">
-                        <h2>City Nearby:-</h2>
-                        <h2> Dindugal , Karur , Tirunelveli</h2>
+                        <h2>City Nearby:</h2>
+                        <h2 id="city-field">Dindugal, Karur, Tirunelveli</h2>
                     </div>
-                    
                 </div>
-            
             </div>
-               
         </div>
         <div class="right-box">
             <div id="map" class="map-container"></div>
         </div>
+        <button class="open-map-button" onclick="openMap()">Open Map</button>
     </div>
-    <script>
-        var map = L.map('map').setView([9.9252, 78.1198], 13); // Coordinates for Madurai
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([9.9252, 78.1198]).addTo(map)
-            .bindPopup('Madurai')
-            .openPopup();
-    </script>
+    <div class="popup-overlay" id="mapPopup">
+        <div class="popup-content">
+            <button class="close-popup-button" onclick="closeMap()">Close</button>
+            <div id="popupMap" class="map-container"></div>
+        </div>
     </div>
-    
+    <footer class="footer margarine-regular">
+        <!--This box should contain the code to include the website logo and link the social media pages to it-->
+        <div class="footer-box1">
+            <div class="climate-inverse playwrite-hu">
+                <h1>Climate <sup>-1</sup></h1>
+            </div>
+            <div class="social-media">
+                <a href="https://x.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/login/"><i class="fa fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/accounts/login"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-box2">
+            <div class="country-list">
+                <h3 class="continent-name">Asia</h3>
+                <ul>
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">South Korea</a></li>
+                    <li><a href="#">Indonesia</a></li>
+                </ul>
+            </div>
+            <div class="country-list">
+                <h3 class="continent-name">Africa</h3>
+                <ul>
+                    <li><a href="#">Nigeria</a></li>
+                    <li><a href="#">Egypt</a></li>
+                    <li><a href="#">South Africa</a></li>
+                    <li><a href="#">Kenya</a></li>
+                    <li><a href="#">Morocco</a></li>
+                </ul>
+            </div>
+            <div class="country-list">
+                <h3 class="continent-name">North America</h3>
+                <ul>
+                    <li><a href="#">United States</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Mexico</a></li>
+                    <li><a href="#">Cuba</a></li>
+                    <li><a href="#">Jamaica</a></li>
+                </ul>
+            </div>
+            <div class="country-list">
+                <h3 class="country-name">South America</h3>
+                <ul>
+                    <li><a href="#">Brazil</a></li>
+                    <li><a href="#">Argentina</a></li>
+                    <li><a href="#">Chile</a></li>
+                    <li><a href="#">Colombia</a></li>
+                    <li><a href="#">Peru</a></li>
+                </ul>
+            </div>
+            <div class="country-list">
+                <h3 class="country-name">Europe</a></h3>
+                <ul>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">United Kingdom</a></li>
+                    <li><a href="#">Italy</a></li>
+                    <li><a href="#">Spain</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </div>
+            <div class="country-list">
+                <h3 class="country-name">Australia</h3>
+                <ul>
+                    <li><a href="#">Australia</a></li>
+                    <li><a href="#">New Zealand</a></li>
+                    <li><a href="#">Fiji</a></li>
+                    <li><a href="#">Papua New Guinea</a></li>
+                    <li><a href="#">Samoa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-box3">
+            <form>
+                <label for="email">Enter your Email to receive our updates!!!</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="someone@tce.edu">
+                <button type="button">Submit</button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
