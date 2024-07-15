@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {  
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color:black;
+    color:white;
+    margin:0;
+    margin-left:-10px;
+    font-family:Arial, sans-serif;
+}
+h2{
+    color:white;
+}
+
+.nav {
+    display:flex;
+    position:fixed;
+    align-items:center;
+    justify-content:space-between;
+    background-color:black;
+    padding:10px 20px;
+    position:relative;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:900;
+}
+
+.nav-menu {
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.nav-menu ul {
+    display:flex;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.nav-menu ul li {
+    list-style-type:none;
+}
+
+.nav-menu ul li .link {
+    text-decoration:none;
+    font-weight:500;
+    color:#fff;
+    padding-bottom:15px;
+    margin:0 25px;
+}
+
+.link:hover, .active {
+    border-bottom:2px solid #fff;
+}
+
+.nav-logo {
+    display:flex;
+    justify-content:space-around;
+}
+
+.nav-logo img {
+    margin:2em;
+    margin-left:5em;
+    align-items:end;
+}
+
+.bar-position {
+    font-size:50px;
+    color:white;
+}
+
+
+.sidebar {
+    width:300px;
+    height:100vh;
+    background-color:rgba(255, 255, 255, 1);
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:20px;
+    transition:transform 0.3s ease;
+    z-index:1000;
+}
+
+.sidebar.hidden {
+    transform:translateX(-100%);
+}
+
+.sidebar a {
+    color:black;
+    text-decoration:none;
+    margin:10px 0;
+}
+
+.main-content {
+    margin-top:-30px;
+    margin-left:300px;
+    padding:20px;
+    width:calc(100% - 300px);
+    transition:margin-left 0.3s ease;
+}
+.climate-inverse-heading{
+    margin-top:-120px;
+} 
+
+.main-content.full-width {
+    margin-left:0;
+    width:100%;
+}
+
+.sandwich-bar {
+    position:relative;
+    top:20px;
+    left:20px;
+    cursor:pointer;
+
+}
+
+.bar-position {
+    font-size:50px;
+    color:white;
+}
+
+.bar-position {
+    color:white;
+}
+
+.nav-button .btn {
+    width:130px;
+    height:40px;
+    font-weight:500;
+    background:rgba(255, 255, 255, 0.4);
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s ease;
+}
